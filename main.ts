@@ -1,8 +1,11 @@
 info.onCountdownEnd(function () {
+    console.log("Done Loading!")
     scene.setBackgroundImage(assets.image`Loading Finished`)
     game.showLongText("Game Has Loaded.", DialogLayout.Bottom)
+    console.log("Game Has Loaded.")
     scene.setBackgroundImage(assets.image`Black Screen`)
     game.showLongText("Now Opening doge.Moon", DialogLayout.Bottom)
+    console.log("Pressed A. Now Opening doge.Moon setting background image to moon.paper enabling doge.sprite")
     music.stopAllSounds()
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -127,13 +130,17 @@ info.onCountdownEnd(function () {
         3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
         `)
     myCorg = corgio.create(SpriteKind.Player)
+    console.log("Loaded moon.paper enabled doge.sprite  now enabling doge.walk-and-jump")
     myCorg.horizontalMovement()
     myCorg.verticalMovement()
+    console.log("enabled doge.walk-and-jump now game playable!")
+    console.log("")
 })
 let myCorg: Corgio = null
 game.splash("SoftArcade Presents..")
 game.splash("Doge")
 game.showLongText("Press A to Start Game!", DialogLayout.Bottom)
+console.log("Pressed A, now loading..")
 scene.setBackgroundImage(assets.image`Loading Assets`)
 info.startCountdown(10)
 music.play(music.stringPlayable("F G F A F G E D ", 200), music.PlaybackMode.LoopingInBackground)
